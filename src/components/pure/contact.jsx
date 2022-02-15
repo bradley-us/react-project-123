@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import { Contact } from '../../models/Contact.class';
 
 
-const ContactComponent = ({ contact, removeContact, connectionMode }) => {
+const ContactComponent = ({ contact}) => {
 
 	const connection = () => {
 		if(!contact.connected){
-			return (<i onClick={() => connectionMode(contact)} className='bi bi-toggle-on text-success contact-action'> No</i>)
+			return (<i className='bi bi-toggle-on text-success contact-action'> No</i>)
 		} else {
-			return (<i onClick={() => connectionMode(contact)} className='bi bi-toggle-off text-primary contact-action'> Sí</i>)
+			return (<i className='bi bi-toggle-off text-primary contact-action'> Sí</i>)
 		}
 	}
 
